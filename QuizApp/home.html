@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/custom-fonts.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <title>Quiz App</title>
+    </head>
+<body>
+    <!--begin of body-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+              <!--home page containing displayed quiz instructiobns-->
+                <div class="instruct mt-5" id="instruction">
+                    <h3 class="animated slideInLeft delay-5s">Welcome to KayBee's Quiz app</h3>
+                    <h4 class="animated slideInLeft delay-5s">Quiz Instructions</h4>
+                    <ul>
+                    <li><h5 class="animated slideInLeft delay-4s">The quiz is on software development.</h5></li>
+                    <li><h5 class="animated slideInLeft delay-3s">There are five(5) questions and four(4) options in all to pick from.</h5></li>
+                    <li><h5 class="animated slideInLeft delay-2s">Click the button on the right hand corner to move to the details page.</h5></li>
+                    <li><h5 class="animated slideInLeft delay-1s">You have 30 seconds only to answer all the questions, once time is up, the quiz will automatically end</h5></li>
+                    <li><h5 class="animated slideInLeft delay-0.5s">You can print your test result at the end of the quiz</h5></li><br><br>
+                    </ul>
+                    <h5 class="animated slideInLeft delay-5s">Good Luck!!!</h5>
+                </div>
+                <!--button to click to toggle the menu-->
+                <div class="menu-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
+                    <!--page to display student details-->
+                    <nav class="menu">
+                      <div class="col">
+                        <div class="menu-brand">
+                            <div class="portrait">
+                                <img src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <div class="text">
+                                <h5 class="text-danger text-center">Please, confirm your details before clicking Begin to start the quiz</h5>
+                                Welcome <h3 id="tit-cont"><span></span></h3>
+                                This is your e-mail: <p id="txt-cont"></p>
+                                <button class="btn-success rounded" onclick="startQuestions()" >Begin</button>
+                            </div>
+                            </div>
+                        </div>
+                        <!--begining of form to fill student details-->
+                            <div class="form-group">
+                                <h4 class="text-muted text-center">Welcome to KayBee CBT</h4><h5 class="text-danger text-center">Please, fill in your details correctly and click the Proceed button</h5>
+
+                                <label for="inputName">Enter your full Name
+                                <input type="text" class="form-control" id="txt-title" name="Name" placeholder="Full Name"></label>
+                                <p id="inp-p1">Choose text Color
+                                <input type="text" class="form-control" id="txt-color" placeholder="Name Color"></p>
+                                
+                                <label for="inputName">Enter your E-mail
+                                <input type="text" class="form-control" id="tit-text" name="Name" placeholder="E-mail"></label>
+                                <p id="inp-p3">Choose text Color   
+                                <input type="text" class="form-control" id="tit-color" placeholder="E-mail Color"></p>
+        
+                                <button id="btn" class="btn-success rounded" onclick="select() ">Proceed</button>
+                            </div>
+                    </nav>
+                <!--start of the quiz page-->
+                <div id="display">
+                  <div id="content">
+                    <div id="showTime"></div>
+                      <div id="wrapper">QUIZ APP</div>
+                        <div id="displayImg">
+                            <h4 id="cap"></h4>
+                        </div>
+                  </div>
+                    <hr>
+                    <!--quiz questions and options are displayed here-->
+                    <div id="showQuestions"></div>
+                      <div id="showOptions">
+                        <p id="question"></p>
+                        <p id="option1"></p>    
+                        <p id="option2"></p>    
+                        <p id="option3"></p>    
+                        <p id="option4"></p>
+                      </div>
+            <div class="row">
+                <div class="col">
+                    <div class="btn">
+                        <button id="nxtQuestion">Next</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+      <!-- END OF QUIZ CONTENT -->
+    <div class="container-fluid navbar-fixed-bottom" id="footer">
+        <div class="row">                           
+          <div class="col-md-5">
+            <span class="contact-info">
+              <span class="contact-group">
+                <span class="fa fa-envelope">
+                  kabiruokponobi@gmail.com
+                </span>
+              </span>&nbsp&nbsp
+              <span class="contact-group">
+                <span class="fa fa-phone">
+                  +2347069771730
+                </span>
+              </span>
+            </span> 
+          </div>
+          <div class="col-md-5">
+            &copy; KayBee 2019 
+          </div>
+          <div class="col-md-2">
+            <span class="social-icons">
+              <a href="http://facebook.com" target="_blank" class="fa fa-facebook-square"></a>
+              <a href="http://youtube.com" target="_blank" class="fa fa-google-plus-square"></a>
+              <a href="http://instagram.com" target="_blank" class="fa fa-instagram"></a>
+              <a href="http://linkedin.com" target="_blank" class="fa fa-linkedin-square"></a>
+              <a href="http://twitter.com" target="_blank" class="fa fa-twitter-square"></a>
+              <a href="http://youtube.com" target="_blank" class="fa fa-youtube-square"></a>
+            </span> 
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- JS link -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
